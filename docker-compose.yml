@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  authservice.api:
+    image: ${DOCKER_REGISTRY-}authserviceapi
+    build:
+      context: .
+      dockerfile: services/AuthService/AuthService.API/Dockerfile

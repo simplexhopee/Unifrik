@@ -1,0 +1,15 @@
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\bin\Debug\net8.0\AuthService.Domain.deps.json
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\bin\Debug\net8.0\Unifrik.Domain.Shared.dll
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\bin\Debug\net8.0\Unifrik.Domain.Shared.pdb
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.csproj.AssemblyReference.cache
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.AssemblyInfoInputs.cache
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.AssemblyInfo.cs
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.csproj.CopyComplete
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.dll
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\refint\AuthService.Domain.dll
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Domain\obj\Debug\net8.0\ref\AuthService.Domain.dll

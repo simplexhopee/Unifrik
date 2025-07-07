@@ -1,0 +1,11 @@
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\bin\Debug\net8.0\AuthService.Contracts.deps.json
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\bin\Debug\net8.0\AuthService.Contracts.dll
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\bin\Debug\net8.0\AuthService.Contracts.pdb
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\AuthService.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\AuthService.Contracts.AssemblyInfoInputs.cache
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\AuthService.Contracts.AssemblyInfo.cs
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\AuthService.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\AuthService.Contracts.dll
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\refint\AuthService.Contracts.dll
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\AuthService.Contracts.pdb
+C:\Users\Hope\Documents\Unifrik\services\AuthService\AuthService.Contracts\obj\Debug\net8.0\ref\AuthService.Contracts.dll

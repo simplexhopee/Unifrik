@@ -1,0 +1,12 @@
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\bin\Debug\net8.0\Unifrik.Infrastructure.Shared.deps.json
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\bin\Debug\net8.0\Unifrik.Infrastructure.Shared.dll
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\bin\Debug\net8.0\Unifrik.Infrastructure.Shared.pdb
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\Unifrik.Infrastructure.Shared.csproj.AssemblyReference.cache
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\Unifrik.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\Unifrik.Infrastructure.Shared.AssemblyInfoInputs.cache
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\Unifrik.Infrastructure.Shared.AssemblyInfo.cs
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\Unifrik.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\Unifrik.Infrastructure.Shared.dll
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\refint\Unifrik.Infrastructure.Shared.dll
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\Unifrik.Infrastructure.Shared.pdb
+C:\Users\Hope\Documents\Unifrik\shared\Unifrik.Infrastructure.Shared\obj\Debug\net8.0\ref\Unifrik.Infrastructure.Shared.dll
