@@ -3,6 +3,12 @@ using Unifrik.Infrastructure.Shared.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
+if (builder.Environment.IsDevelopment())
+{
+    DotNetEnv.Env.Load(); 
+}
+builder.Configuration.AddEnvironmentVariables();
+
 // Add services to the container.
 
 builder.Services.AddControllers();

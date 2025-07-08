@@ -52,7 +52,7 @@ Each service is independently deployable and communicates via REST or asynchrono
 - PostgreSQL and MongoDB for data storage
 - Redis for caching and token management
 - RabbitMQ for event-driven communication
-- MinIO for secure file storage (e.g. ID documents)
+- MinIO for secure file storage
 - Docker and Docker Compose for development orchestration
 - GitHub Actions for CI
 

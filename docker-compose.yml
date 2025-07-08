@@ -6,3 +6,15 @@ services:
     build:
       context: .
       dockerfile: services/AuthService/AuthService.API/Dockerfile
+    depends_on:
+      - postgress_db
+      - redis
+    env_file:
+      - .env
+  postgress_db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+  redis:
+     image: redis
