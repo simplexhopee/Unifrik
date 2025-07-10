@@ -15,3 +15,6 @@ services:
   redis:
     ports:
       - "6379:6379"
+  postgress_db:
+    ports:
+      - "5432:5432"

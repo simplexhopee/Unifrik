@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Unifrik.Domain.Shared;
+using Unifrik.Domain.Shared.Entities;
 using Unifrik.Infrastructure.Shared.User;
 
 namespace Unifrik.Infrastructure.Shared.Database.Infrastructure

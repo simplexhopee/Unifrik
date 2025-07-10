@@ -7,8 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\shared\Unifrik.Common.Shared\Unifrik.Common.Shared.csproj" />
     <ProjectReference Include="..\AuthService.Contracts\AuthService.Contracts.csproj" />
     <ProjectReference Include="..\AuthService.Domain\AuthService.Domain.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+		<PackageReference Include="MediatR" Version="13.0.0" />
+	</ItemGroup>
 </Project>

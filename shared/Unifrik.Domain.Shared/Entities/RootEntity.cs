@@ -1,6 +1,4 @@
-﻿
-
-namespace Unifrik.Domain.Shared
+﻿namespace Unifrik.Domain.Shared.Entities
 {
     public class RootEntity
     {

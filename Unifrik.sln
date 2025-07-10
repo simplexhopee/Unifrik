@@ -36,6 +36,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unifrik.Gateway", "gateway\
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AC025525-8E74-4721-898F-54DB141410AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unifrik.Common.Shared", "shared\Unifrik.Common.Shared\Unifrik.Common.Shared.csproj", "{FCDB7669-AC69-49EB-A211-EE93102B951A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{AC025525-8E74-4721-898F-54DB141410AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC025525-8E74-4721-898F-54DB141410AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC025525-8E74-4721-898F-54DB141410AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCDB7669-AC69-49EB-A211-EE93102B951A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCDB7669-AC69-49EB-A211-EE93102B951A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCDB7669-AC69-49EB-A211-EE93102B951A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCDB7669-AC69-49EB-A211-EE93102B951A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{6F7EB3C6-D7AD-4E5A-B90D-10CA6A232342} = {974ACFAA-21E3-41E8-98A2-8CAC2A0208DF}
 		{E97DCB53-2909-4CD2-B4F9-61DE044399ED} = {82222C4F-E870-472A-B4AE-D136F42C6D7F}
 		{501FA32A-F733-4C4B-853D-8B2A170E4D79} = {BCCE67A2-F781-495B-9959-8406FB30AF05}
+		{FCDB7669-AC69-49EB-A211-EE93102B951A} = {82222C4F-E870-472A-B4AE-D136F42C6D7F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE177601-C32B-451E-956B-121EE1AF8636}

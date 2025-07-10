@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Unifrik.Infrastructure.Shared.Enums
+namespace Unifrik.Domain.Shared.Enums
 {
     public enum UserTypeEnum
     {
         Buyer,
         Seller,
-        Logistics
+        LogisticsAgent
     }
 }

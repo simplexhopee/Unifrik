@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Unifrik.Domain.Shared
+namespace Unifrik.Domain.Shared.Entities
 {
     public interface IAuditable
     {

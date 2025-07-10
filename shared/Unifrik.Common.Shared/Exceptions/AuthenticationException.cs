@@ -1,6 +1,6 @@
 ﻿
 
-namespace Unifrik.Infrastructure.Shared.Exceptions
+namespace Unifrik.Common.Shared.Exceptions
 {
     [Serializable]
     public class AuthenticationException : Exception

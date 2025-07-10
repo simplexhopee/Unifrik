@@ -10,7 +10,6 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["services/AuthService/AuthService.API/AuthService.API.csproj", "services/AuthService/AuthService.API/"]
-COPY ["shared/Unifrik.Common.Shared/Unifrik.Common.Shared.csproj", "shared/Unifrik.Common.Shared/"]
 COPY ["shared/Unifrik.Infrastructure.Shared/Unifrik.Infrastructure.Shared.csproj", "shared/Unifrik.Infrastructure.Shared/"]
 COPY ["shared/Unifrik.Domain.Shared/Unifrik.Domain.Shared.csproj", "shared/Unifrik.Domain.Shared/"]
 COPY ["services/AuthService/AuthService.Application/AuthService.Application.csproj", "services/AuthService/AuthService.Application/"]
