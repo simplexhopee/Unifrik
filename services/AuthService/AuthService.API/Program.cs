@@ -10,6 +10,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using Unifrik.Infrastructure.Shared.Configuration;
 using Unifrik.Infrastructure.Shared.Database.Infrastructure;
 using Unifrik.Infrastructure.Shared.Database.Interfaces;
@@ -44,7 +45,11 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddAutoMapper(typeof(RegisterBuyerDto).Assembly);
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+     .AddJsonOptions(options =>
+     {
+         options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+     });
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services
     .AddScoped<IUserRepository, UserRepository>()
@@ -58,6 +63,12 @@ builder.Services.AddSwaggerGen();
 var configuration = builder.Configuration;
 builder.Services.AddSharedServices(configuration);
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<UserDbContext>();
+    db.Database.Migrate(); 
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
