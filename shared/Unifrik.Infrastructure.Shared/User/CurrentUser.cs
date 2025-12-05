@@ -20,11 +20,10 @@ namespace Unifrik.Infrastructure.Shared.User
         public string Currency { get; private set; } = default!;
 
       
-        public void SetUser(string email, string role, UserTypeEnum userType, string languagePreference, string currency)
+        public void SetUser(string email,  UserTypeEnum userType, string languagePreference = "", string currency = "")
         {
             if (!string.IsNullOrEmpty(Email)) throw new InvalidOperationException("Current User is set already");
             Email = email;
-            Role = role;
             UserType = userType;
             LanguagePreference = languagePreference;
             Currency = currency;

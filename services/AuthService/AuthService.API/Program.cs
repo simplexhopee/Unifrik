@@ -1,3 +1,4 @@
+using Amazon.S3;
 using AuthService.Application.Commands.Register;
 using AuthService.Application.Dtos;
 using AuthService.Application.Interfaces;
@@ -10,13 +11,20 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Logging;
+using Serilog;
 using System;
 using Unifrik.Infrastructure.Shared.Configuration;
 using Unifrik.Infrastructure.Shared.Database.Infrastructure;
 using Unifrik.Infrastructure.Shared.Database.Interfaces;
 using Unifrik.Infrastructure.Shared.Middlewares;
+using Unifrik.Infrastructure.Shared.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
 
 if (builder.Environment.IsDevelopment())
 {
@@ -36,6 +44,10 @@ builder.Services
     .AddIdentity<AuthService.Domain.Entities.User, IdentityRole>()
     .AddEntityFrameworkStores<UserDbContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.AddAWSService<IAmazonS3>();
+
+builder.Services.AddScoped<IFileService, S3FileService>();  
 
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork<UserDbContext>>();
@@ -60,6 +72,7 @@ builder.Services
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 var configuration = builder.Configuration;
 builder.Services.AddSharedServices(configuration);
 var app = builder.Build();
@@ -71,17 +84,26 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Configure the HTTP request pipeline.
-// if (app.Environment.IsDevelopment())
-//{
+if (app.Environment.IsDevelopment())
+{
     app.UseSwagger();
     app.UseSwaggerUI();
-//}
-app.MapHealthChecks("/api/health");
-app.UseMiddleware<GetCurrentUserMiddleware>();
+}
 app.UseMiddleware<ExceptionHandlerMiddleware>();
+
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+IdentityModelEventSource.ShowPII = true;
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<GetCurrentUserMiddleware>();
+
+
+
+
+app.MapHealthChecks("/api/health");
 
 app.MapControllers();
 

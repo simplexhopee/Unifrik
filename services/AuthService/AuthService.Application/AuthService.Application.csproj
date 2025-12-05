@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\shared\Unifrik.Common.Shared\Unifrik.Common.Shared.csproj" />
+    <ProjectReference Include="..\..\..\shared\Unifrik.Infrastructure.Shared\Unifrik.Infrastructure.Shared.csproj" />
     <ProjectReference Include="..\AuthService.Contracts\AuthService.Contracts.csproj" />
     <ProjectReference Include="..\AuthService.Domain\AuthService.Domain.csproj" />
   </ItemGroup>

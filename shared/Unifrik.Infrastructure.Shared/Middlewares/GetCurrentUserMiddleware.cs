@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
+using Unifrik.Domain.Shared.Enums;
 using Unifrik.Infrastructure.Shared.User;
 
 namespace Unifrik.Infrastructure.Shared.Middlewares
@@ -16,18 +18,18 @@ namespace Unifrik.Infrastructure.Shared.Middlewares
 
         public async Task Invoke(HttpContext context, ICurrentUser _currentUser)
         {
-            var user = context.User;
-            var roles = user.Claims
-            .Where(c => c.Type == "roles")
-            .Select(c => c.Value)
-            .ToList();
-
-            var permissions = user.Claims
-           .Where(c => c.Type == "permissions")
-           .Select(c => c.Value)
-           .ToList();
-
-          //  if (user.FindFirst("email") != null) _currentUser.SetUser(user?.FindFirst("email").Value, roles, permissions);
+            var user = context.User; 
+            if (user.Identity.IsAuthenticated)
+            {
+                var roleString = user.Claims
+               .First(c => c.Type == ClaimTypes.Role).Value;
+                UserTypeEnum role = Enum.Parse<UserTypeEnum>(roleString);
+                string email = user.Claims
+                    .First(c => c.Type == ClaimTypes.Email).Value;
+                _currentUser.SetUser(email, role);
+            }
+               
+           
             await _next(context);
         }
     }

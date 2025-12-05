@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.JsonWebTokens;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -28,14 +29,15 @@ namespace AuthService.Infrastructure.Auth
         {
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new Claim(ClaimTypes.Email , user.Email!),
                 new Claim(ClaimTypes.Name, user.Name!.ToString()),
                 new Claim(ClaimTypes.Role, user.UserType.ToString()),
 
             };
-           
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.IssuerSigningKey ?? ""));
+
+            var keyBytes = Convert.FromBase64String(_jwtSettings.IssuerSigningKey?? "");
+            var key = new SymmetricSecurityKey(keyBytes);
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(

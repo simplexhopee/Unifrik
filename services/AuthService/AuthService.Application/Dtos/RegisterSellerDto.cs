@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unifrik.Common.Shared.Validators;
 
 namespace AuthService.Application.Dtos
 {
@@ -30,7 +31,8 @@ namespace AuthService.Application.Dtos
         public string Country { get; set; } = default!;
         public string? WebsiteUrl { get; set; }
         public string? BusinessDescription { get; set; }
-        public IFormFile? BusinessLogoFileName { get; set; }
+        [AllowedExtensions([".pdf", ".jpg", ".png"], 204800)]
+        public IFormFile? BusinessLogoFile { get; set; }
         public string? LanguagePreference { get; set; } = "English";
     }
 

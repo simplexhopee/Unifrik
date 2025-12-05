@@ -12,7 +12,7 @@ namespace Unifrik.Infrastructure.Shared.User
         string LanguagePreference { get; }
         string Currency { get; }
 
-        void SetUser(string email, string role, UserTypeEnum userType, string Language, string Currency);
+        void SetUser(string email, UserTypeEnum userType, string Language = "", string Currency = "");
 
     }
 }

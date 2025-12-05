@@ -1,6 +1,7 @@
 ﻿using AuthService.Application.Interfaces;
 using AuthService.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
+using System.Reflection;
 using Unifrik.Infrastructure.Shared.Database.Interfaces;
 
 namespace AuthService.Infrastructure.Auth
@@ -34,6 +35,27 @@ namespace AuthService.Infrastructure.Auth
             await _userManager.CreateAsync(user, password);
             var createdUser = await _repository.GetByEmail(user!.Email!);
             return createdUser!;
+        }
+
+        public async Task<User> UpdateUser(string email, User user)
+        {
+            var existingUser = await _repository.GetByEmail(email);
+            var properties = typeof(User).GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                                   .Where(p => p.CanWrite);
+
+            foreach (var prop in properties)
+            {
+                if (prop.Name is "Id" or "PasswordHash" or "SecurityStamp" or "ConcurrencyStamp" or "Email")
+                    continue;
+                var newValue = prop.GetValue(user);
+                if (newValue != null) 
+                {
+                    prop.SetValue(existingUser, newValue);
+                }
+            }
+
+            await _userManager.UpdateAsync(existingUser!);
+            return existingUser!;
         }
 
         public async Task<bool> VerifyPasswordResetToken(User user, string token)
