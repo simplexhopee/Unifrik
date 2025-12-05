@@ -4,7 +4,7 @@ services:
   authservice.api:
     image: 164612576049.dkr.ecr.eu-north-1.amazonaws.com/authserviceapi:latest
     env_file:
-      - /home/ubuntu/.env.prod
+      - /home/ubuntu/.env
     ports:
       - "8080:8080"
       - "8081:8081"
@@ -20,7 +20,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
-      - /home/ubuntu/.env.prod
+      - /home/ubuntu/.env
 
   redis:
     image: redis:7
