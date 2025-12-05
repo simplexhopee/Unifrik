@@ -35,8 +35,10 @@ builder.Configuration.AddEnvironmentVariables();
 
 // Add services to the container.
 builder.Services.AddDbContext<UserDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("User"))
+    options.UseNpgsql(builder.Configuration.GetConnectionString("User"),
+        b => b.MigrationsAssembly("AuthService.Infrastructure"))
 );
+
 
 
 

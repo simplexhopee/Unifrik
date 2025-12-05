@@ -34,8 +34,7 @@ secrets.json
 ## Logs
 *.log
 
-## Entity Framework
-Migrations/
+
 
 ## dotCover
 .idea/
